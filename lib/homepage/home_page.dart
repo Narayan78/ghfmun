@@ -55,6 +55,7 @@ class HomePage extends StatelessWidget {
                           },
                         );
                       }).toList(),
+                      
                     ),
                     Container(
                       height: size.height * 0.9,
