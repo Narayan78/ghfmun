@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class NavigationButton extends StatelessWidget {
   final buttonText;
   final VoidCallback onPressed;
-  const NavigationButton({super.key, required this.buttonText , required this.onPressed});
+  const NavigationButton(
+      {super.key, required this.buttonText, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,9 @@ class NavigationButton extends StatelessWidget {
       child: Text(
         buttonText,
         style: const TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255), fontSize: 20, fontWeight: FontWeight.bold),
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.bold),
       ),
     );
   }

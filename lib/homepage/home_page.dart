@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:ghfmun/common_widgets/footer.dart';
 import 'package:ghfmun/common_widgets/navigation_bar.dart';
-
+import 'package:ghfmun/useful_data/agendas.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../common_widgets/logoContainer.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +29,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     CarouselSlider(
                       options: CarouselOptions(
-                        height: size.height * 0.88,
+                        height: size.height * 0.9,
                         autoPlay: true,
                         autoPlayInterval: const Duration(seconds: 10),
                         autoPlayAnimationDuration:
@@ -55,7 +57,7 @@ class HomePage extends StatelessWidget {
                       }).toList(),
                     ),
                     Container(
-                      height: size.height * 0.88,
+                      height: size.height * 0.9,
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.topCenter,
@@ -120,7 +122,9 @@ class HomePage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () async {
+                                       await launchUrl(Uri.parse("https://www.google.com"));
+                                    },
                                     style: ElevatedButton.styleFrom(
                                       // primary: Colors.white,
                                       padding: const EdgeInsets.symmetric(
@@ -181,13 +185,20 @@ class HomePage extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 40.0, right: 40.0),
                   child: Text(
+
+
+
+
+
+
+
                     textAlign: TextAlign.justify,
-                    "Welcome to GHF MUN, a dynamic and innovative Model United Nations conference that is committed to providing a "
-                    "platform for young leaders to engage in diplomatic discussions and debates on global issues. GHF MUN is a simulation of the "
-                    "United Nations, where students take on the role of delegates, representing different countries and debating on global issues."
-                    "GHF MUN is a platform for young leaders to engage in diplomatic discussions and debates on global issues. GHF MUN is a simulation "
-                    "platform for young leaders to engage in diplomatic discussions and debates on global issues. GHF MUN is a simulation of the "
-                    "of the United Nations, where students take on the role of delegates, representing different countries and debating on global issues.",
+
+                    "Welcome to GHFMUN, a dynamic Model United Nations program dedicated to cultivating the next generation of global leaders."
+                    "GHFMUN provides a unique platform for high school and college students to engage in simulated United Nations conferences, "
+                    "fostering diplomacy, critical thinking, and cross-cultural understanding."
+                    "GHFMUN hosts an annual conference that brings together students from diverse backgrounds. Our conferences feature a variety of committees, each focusing on different aspects of international relations and current global challenges."
+                     ,
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -196,6 +207,12 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
+
+               const Padding(
+                  padding:  EdgeInsets.only(left: 30, right: 30),
+                  child:  AgendaSection(),
+                ),
+               const FooterSection()
               ],
             ),
             Positioned(

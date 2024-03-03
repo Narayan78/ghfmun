@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ghfmun/common_widgets/footer.dart';
 
 import '../common_widgets/logoContainer.dart';
 import '../common_widgets/navigation_bar.dart';
@@ -20,7 +21,7 @@ class JoinUs extends StatelessWidget {
                   const NavigationBarWidget(),
                   Container(
                     color: const Color.fromARGB(255, 255, 255, 255),
-                    height: screenSize.height * 0.88 + screenSize.height * 0.3,
+                    height: screenSize.height -screenSize.height*0.3,
                     width: screenSize.width,
                     child: const Center(
                       child: Padding(
@@ -51,6 +52,9 @@ class JoinUs extends StatelessWidget {
                       ),
                     ),
                   ),
+                  
+                  
+               const FooterSection()
                 ],
               ),
               Positioned(

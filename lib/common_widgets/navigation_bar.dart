@@ -18,21 +18,21 @@ class NavigationBarWidget extends StatelessWidget {
           end: Alignment.bottomCenter,
           colors: [
             Color.fromARGB(255, 129, 127, 127),
-            Color.fromARGB(255, 39, 58, 60),
+            Color.fromARGB(255, 34, 50, 52),
           ],
         ),
       ),
-      height: size.height * 0.12,
+      height: size.height * 0.1,
       width: size.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const SizedBox(width: 30),
-             Image.asset(
-            "assets/NepaliFlag.png",
-            height: 120,
-            width: 120,
-          ),
+          // const SizedBox(width: 30),
+          //    Image.asset(
+          //   "assets/NepaliFlag.png",
+          //   height: 120,
+          //   width: 120,
+          // ),
           const Spacer(),
           NavigationButton(
             buttonText: "Home",
@@ -74,26 +74,7 @@ class NavigationBarWidget extends StatelessWidget {
               );
             },
           ),
-          NavigationButton(
-            buttonText: "Contact Us",
-            onPressed: () {
-              Navigator.pop(context);
-              Navigator.push(
-                context,
-                PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const ContactUs(),
-                  transitionsBuilder:
-                      (context, animation, secondaryAnimation, child) {
-                    return FadeTransition(
-                      opacity: animation,
-                      child: child,
-                    );
-                  },
-                ),
-              );
-            },
-          ),
+      
           NavigationButton(
             buttonText: "Join Us",
             onPressed: () {
@@ -114,6 +95,30 @@ class NavigationBarWidget extends StatelessWidget {
               );
             },
           ),
+
+              NavigationButton(
+            buttonText: "Contact Us",
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const ContactUs(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    return FadeTransition(
+                      opacity: animation,
+                      child: child,
+                    );
+                  },
+                ),
+              );
+            },
+          ),
+
+
+          
        
           // const Text(
           //   "Nepal",
@@ -126,3 +131,5 @@ class NavigationBarWidget extends StatelessWidget {
     );
   }
 }
+
+

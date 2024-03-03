@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+import '../common_widgets/footer.dart';
 import '../common_widgets/logoContainer.dart';
 import '../common_widgets/navigation_bar.dart';
 
@@ -17,7 +19,7 @@ class AboutUs extends StatelessWidget {
           children: [
             Column(
               children: [
-                const NavigationBarWidget(),
+                 NavigationBarWidget(),
                 Padding(
                   padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                   child: Container(
@@ -108,6 +110,8 @@ class AboutUs extends StatelessWidget {
                     ],
                   ),
                 ),
+               const FooterSection()
+
               ],
             ),
             Positioned(
