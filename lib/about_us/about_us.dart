@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:ghfmun/useful_data/faqs.dart';
 
 import '../common_widgets/footer.dart';
 import '../common_widgets/logoContainer.dart';
@@ -19,7 +19,7 @@ class AboutUs extends StatelessWidget {
           children: [
             Column(
               children: [
-                 NavigationBarWidget(),
+                const NavigationBarWidget(),
                 Padding(
                   padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                   child: Container(
@@ -110,8 +110,20 @@ class AboutUs extends StatelessWidget {
                     ],
                   ),
                 ),
-               const FooterSection()
-
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: FAQs(
+                    title: "What is GHFMUN?",
+                    content:
+                        "The Global Help Foundation Model United Nations (GHFMUN) is a platform for young leaders to engage "
+                        " in diplomatic discussions and debates on global issues. GHFMUN is a simulation of the United Nations, where "
+                        "students take on the role of delegates, representing different countries and debating on global issues. GHFMUN is a "
+                        " platform for young leaders to engage in diplomatic discussions and debates on global issues. GHFMUN is a simulation "
+                        "of the United Nations, where students take on the role of delegates, representing different countries and debating on "
+                        "global issues.",
+                  ),
+                ),
+                const FooterSection(),
               ],
             ),
             Positioned(
