@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../common_widgets/footer.dart';
-import '../common_widgets/logoContainer.dart';
-import '../common_widgets/navigation_bar.dart';
+import '../../common_widgets/footer.dart';
+import '../../common_widgets/logoContainer.dart';
+import '../../common_widgets/navigation_bar.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({super.key});

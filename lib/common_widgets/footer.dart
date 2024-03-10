@@ -13,7 +13,6 @@ class FooterSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const Spacer(),
           const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

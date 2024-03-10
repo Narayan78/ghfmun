@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ghfmun/about_us/about_us.dart';
+import 'package:ghfmun/Views/about_us/about_us.dart';
 import 'package:ghfmun/common_widgets/nav_button.dart';
-import 'package:ghfmun/contact_us/contact_us.dart';
-import 'package:ghfmun/homepage/home_page.dart';
-import 'package:ghfmun/join_us/join_us.dart';
+import 'package:ghfmun/Views/contact_us/contact_us.dart';
+import 'package:ghfmun/Views/homepage/home_page.dart';
+import 'package:ghfmun/Views/join_us/join_us.dart';
+import 'dart:html' as html;
 
 class NavigationBarWidget extends StatelessWidget {
   const NavigationBarWidget({super.key});
@@ -12,27 +13,24 @@ class NavigationBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Color.fromARGB(255, 129, 127, 127),
-            Color.fromARGB(255, 34, 50, 52),
-          ],
-        ),
+      decoration: const  BoxDecoration(
+
+        color: Color.fromARGB(255, 4, 65, 116)
+        // gradient: LinearGradient(
+        //   begin: Alignment.topCenter,
+        //   end: Alignment.bottomCenter,
+        //   colors: [
+        //     Color.fromARGB(255, 2, 63, 112)
+        //     // Color.fromARGB(255, 129, 127, 127),
+        //     // Color.fromARGB(255, 34, 50, 52),
+        //   ],
+        // ),
       ),
       height: size.height * 0.1,
       width: size.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          // const SizedBox(width: 30),
-          //    Image.asset(
-          //   "assets/NepaliFlag.png",
-          //   height: 120,
-          //   width: 120,
-          // ),
           const Spacer(),
           NavigationButton(
             buttonText: "Home",
@@ -52,6 +50,7 @@ class NavigationBarWidget extends StatelessWidget {
                   },
                 ),
               );
+              html.window.history.pushState(null, 'Home Screen', '/home-page');
             },
           ),
           NavigationButton(
@@ -72,9 +71,10 @@ class NavigationBarWidget extends StatelessWidget {
                   },
                 ),
               );
+              html.window.history.pushState(null, 'About Us', '/about-us');
             },
           ),
-      
+
           NavigationButton(
             buttonText: "Join Us",
             onPressed: () {
@@ -93,10 +93,11 @@ class NavigationBarWidget extends StatelessWidget {
                   },
                 ),
               );
+              html.window.history.pushState(null, 'Join Us', '/join-us');
             },
           ),
 
-              NavigationButton(
+          NavigationButton(
             buttonText: "Contact Us",
             onPressed: () {
               Navigator.pop(context);
@@ -114,12 +115,10 @@ class NavigationBarWidget extends StatelessWidget {
                   },
                 ),
               );
+              html.window.history.pushState(null, 'contact us', '/contact-us');
             },
           ),
 
-
-          
-       
           // const Text(
           //   "Nepal",
           //   style: TextStyle(
@@ -131,5 +130,3 @@ class NavigationBarWidget extends StatelessWidget {
     );
   }
 }
-
-

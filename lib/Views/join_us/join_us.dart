@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common_widgets/footer.dart';
-
-import '../common_widgets/logoContainer.dart';
-import '../common_widgets/navigation_bar.dart';
+import '../../common_widgets/logoContainer.dart';
+import '../../common_widgets/navigation_bar.dart';
 
 class JoinUs extends StatelessWidget {
   const JoinUs({super.key});
@@ -42,7 +41,14 @@ class JoinUs extends StatelessWidget {
                               height: 20,
                             ),
                             Text(
-                              "The Global Humanitarian Forum Model United Nations (GHFMUN) is a platform for young leaders to engage in diplomatic discussions and debates on global issues. GHFMUN is a simulation of the United Nations, where students take on the role of delegates, representing different countries and debating on global issues. GHFMUN is a platform for young leaders to engage in diplomatic discussions and debates on global issues. GHFMUN is a simulation of the United Nations, where students take on the role of delegates, representing different countries and debating on global issues.",
+                                  textAlign: TextAlign.justify,
+                              "The Global Help Foundation Model United Nations (GHFMUN) is a platform for"
+                              " young leaders to engage in diplomatic discussions and debates on global issues."
+                              " GHFMUN is a simulation of the United Nations, where students take on the role of "
+                              "delegates, representing different countries and debating on global issues. GHFMUN"
+                              " is a platform for young leaders to engage in diplomatic discussions and debates on"
+                              " global issues. GHFMUN is a simulation of the United Nations, where students take on"
+                              "the role of delegates, representing different countries and debating on global issues.",
                               style: TextStyle(
                                 fontSize: 20,
                               ),

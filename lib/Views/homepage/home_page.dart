@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:ghfmun/common_widgets/footer.dart';
 import 'package:ghfmun/common_widgets/navigation_bar.dart';
 import 'package:ghfmun/useful_data/agendas.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../common_widgets/logoContainer.dart';
+import '../../Price_detail/Price_detail.dart';
+import '../../common_widgets/logoContainer.dart';
+import '../../common_widgets/our_team.dart';
+import '../training_section/training.dart';
+import '../why_us/why_us.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -55,7 +60,6 @@ class HomePage extends StatelessWidget {
                           },
                         );
                       }).toList(),
-                      
                     ),
                     Container(
                       height: size.height * 0.9,
@@ -97,7 +101,7 @@ class HomePage extends StatelessWidget {
                           child: Column(
                             children: [
                               const SizedBox(
-                                height: 10,
+                                height: 5,
                               ),
                               const Text(
                                 "GHF MUN",
@@ -107,7 +111,7 @@ class HomePage extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(
-                                height: 10,
+                                height: 5,
                               ),
                               const Text(
                                 "The Global Help Foundation Model United Nations",
@@ -117,14 +121,15 @@ class HomePage extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(
-                                height: 18,
+                                height: 10,
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ElevatedButton(
                                     onPressed: () async {
-                                       await launchUrl(Uri.parse("https://www.google.com"));
+                                      await launchUrl(Uri.parse(
+                                          "https://forms.gle/WKTNFe8Wq5qsEoNv8"));
                                     },
                                     style: ElevatedButton.styleFrom(
                                       // primary: Colors.white,
@@ -183,37 +188,36 @@ class HomePage extends StatelessWidget {
                     Spacer(),
                   ],
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 40.0, right: 40.0),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40.0, right: 40.0),
                   child: Text(
-
-
-
-
-
-
-
-                    textAlign: TextAlign.justify,
-
+                    textAlign: TextAlign.center,
                     "Welcome to GHFMUN, a dynamic Model United Nations program dedicated to cultivating the next generation of global leaders."
                     "GHFMUN provides a unique platform for high school and college students to engage in simulated United Nations conferences, "
                     "fostering diplomacy, critical thinking, and cross-cultural understanding."
-                    "GHFMUN hosts an annual conference that brings together students from diverse backgrounds. Our conferences feature a variety of committees, each focusing on different aspects of international relations and current global challenges."
-                     ,
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
+                    " GHFMUN hosts an annual conference that brings together students from diverse backgrounds. Our conferences feature a variety "
+                    "of committees, each focusing on different aspects of international relations and current global challenges.",
+                    style: GoogleFonts.actor(
+                        textStyle: const TextStyle(fontSize: 20)),
                   ),
                 ),
                 const SizedBox(
                   height: 50,
                 ),
-
-               const Padding(
-                  padding:  EdgeInsets.only(left: 30, right: 30),
-                  child:  AgendaSection(),
+                const WhyUs(),
+                const SizedBox(
+                  height: 50,
                 ),
-               const FooterSection()
+                TrainingSection(),
+                const SizedBox(
+                  height: 50,
+                ),
+                const PriceDetail(),
+                const Padding(
+                  padding: EdgeInsets.only(left: 30, right: 30),
+                  child: AgendaSection(),
+                ),
+                const FooterSection()
               ],
             ),
             Positioned(

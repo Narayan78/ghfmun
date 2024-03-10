@@ -16,8 +16,8 @@ class LogoContainer extends StatelessWidget {
         ),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(50),
-          topLeft: Radius.circular(50),
+          bottomRight: Radius.circular(30),
+          topLeft: Radius.circular(30),
           topRight: Radius.circular(10),
         ),
         //  color: Color.fromARGB(255, 94, 153, 236),
