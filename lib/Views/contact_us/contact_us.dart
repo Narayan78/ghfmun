@@ -3,7 +3,6 @@ import 'package:ghfmun/enquiry%20logics/all_enquiry.dart';
 import '../../common_widgets/footer.dart';
 import '../../common_widgets/logoContainer.dart';
 import '../../common_widgets/navigation_bar.dart';
-import '../join_us/join_us.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({super.key});

@@ -2,12 +2,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common_widgets/footer.dart';
 import 'package:ghfmun/common_widgets/navigation_bar.dart';
-import 'package:ghfmun/useful_data/agendas.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../Price_detail/Price_detail.dart';
 import '../../common_widgets/logoContainer.dart';
-import '../../common_widgets/our_team.dart';
 import '../training_section/training.dart';
 import '../why_us/why_us.dart';
 
