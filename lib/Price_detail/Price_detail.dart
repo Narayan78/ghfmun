@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../enquiry logics/enquiry_controller.dart';
+import '../enquiry logics/enquiry_repository.dart';
 
 class PriceDetail extends StatelessWidget {
   const PriceDetail({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-    final  emailController = TextEditingController();
+    final emailController = TextEditingController();
     final numberController = TextEditingController();
     final enquiryController = TextEditingController();
     final screenSize = MediaQuery.of(context).size;
@@ -49,7 +48,7 @@ class PriceDetail extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                         TextField(
+                        TextField(
                           controller: emailController,
                           cursorColor: Colors.blue,
                           decoration: const InputDecoration(
@@ -70,7 +69,7 @@ class PriceDetail extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                         TextField(
+                        TextField(
                           controller: numberController,
                           cursorColor: Colors.blue,
                           decoration: const InputDecoration(
@@ -91,7 +90,7 @@ class PriceDetail extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                         TextField(
+                        TextField(
                           controller: enquiryController,
                           maxLines: 3,
                           cursorColor: Colors.blue,
@@ -121,14 +120,17 @@ class PriceDetail extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                               EnquiryController controller = EnquiryController();
-                              controller.enquiryControllerFunction(
-                                email: emailController.text,
-                                phoneNumber: numberController.text,
-                                query: enquiryController.text
-                              );
-                                
-                                // _showDialog("We will respond to you shortly. " , context);
+                              
+                              EnquiryRepository repo = EnquiryRepository();
+                              repo.sendEnquiry(
+                                  emailController.text,
+                                  numberController.text,
+                                  enquiryController.text);
+
+                                  emailController.clear();
+                                  numberController.clear();
+                                  enquiryController.clear();
+                                  
                             },
                             child: const Text(
                               "Send",
@@ -205,7 +207,9 @@ class PriceDetail extends StatelessWidget {
                                             MaterialStateProperty.all(
                                                 Colors.amber)),
                                     onPressed: () {
-                                      _showDialog("Booking session comming soon" , context);
+                                      _showDialog(
+                                          "Booking session comming soon",
+                                          context);
                                     },
                                     child: const Text(
                                       "Book Now",
@@ -292,7 +296,10 @@ class PriceDetail extends StatelessWidget {
                                             MaterialStateProperty.all(
                                                 Colors.amber)),
                                     onPressed: () {
-                                      _showDialog( "Booking session comming soon" , context ,);
+                                      _showDialog(
+                                        "Booking session comming soon",
+                                        context,
+                                      );
                                     },
                                     child: const Text(
                                       "Book Now",
@@ -341,7 +348,7 @@ Future<void> _showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        content:  Text(
+        content: Text(
           message,
           style: const TextStyle(fontSize: 18),
         ),

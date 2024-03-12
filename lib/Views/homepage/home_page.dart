@@ -43,9 +43,9 @@ class HomePage extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                       ),
                       items: [
-                        "https://static.wixstatic.com/media/8c42d0_a4acba54fa3a472faa3bb11eb56ae4b1~mv2.png/v1/fill/w_1700,h_628,al_c,q_90,enc_auto/8c42d0_a4acba54fa3a472faa3bb11eb56ae4b1~mv2.png",
-                        "https://static.wixstatic.com/media/8c42d0_9a95292d0d714d3fb05b8572363217de~mv2.jpg/v1/fill/w_1680,h_620,al_c,q_85,enc_auto/8c42d0_9a95292d0d714d3fb05b8572363217de~mv2.jpg",
-                        "https://static.wixstatic.com/media/8c42d0_9a95292d0d714d3fb05b8572363217de~mv2.jpg/v1/fill/w_1680,h_620,al_c,q_85,enc_auto/8c42d0_9a95292d0d714d3fb05b8572363217de~mv2.jpg"
+                        "assets/ghfmun_logo.jpg",
+                        "assets/ghfmun_logo.jpg",
+                        "assets/ghfmun_logo.jpg"
                       ].map((i) {
                         return Builder(
                           builder: (BuildContext context) {
@@ -128,8 +128,10 @@ class HomePage extends StatelessWidget {
                                 children: [
                                   ElevatedButton(
                                     onPressed: () async {
-                                      await launchUrl(Uri.parse(
-                                          "https://forms.gle/WKTNFe8Wq5qsEoNv8"));
+                                      await launchUrl(
+                                        Uri.parse(
+                                            "https://forms.gle/iekn78p2D1kjMxLV7"),
+                                      );
                                     },
                                     style: ElevatedButton.styleFrom(
                                       // primary: Colors.white,
@@ -213,10 +215,7 @@ class HomePage extends StatelessWidget {
                   height: 50,
                 ),
                 const PriceDetail(),
-                const Padding(
-                  padding: EdgeInsets.only(left: 30, right: 30),
-                  child: AgendaSection(),
-                ),
+                 const SizedBox(height: 20,),
                 const FooterSection()
               ],
             ),

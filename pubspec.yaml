@@ -45,6 +45,8 @@ dependencies:
   flutter_staggered_animations: ^1.1.1
   google_fonts: ^6.2.1
   path_provider: ^2.1.2
+  dio: ^5.4.1
+  http: ^1.2.1
 
 dev_dependencies:
   flutter_test:
