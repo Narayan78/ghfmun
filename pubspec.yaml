@@ -43,7 +43,7 @@ dependencies:
   scroll_to_index: ^3.0.1
   sliver_tools: ^0.2.12
   flutter_staggered_animations: ^1.1.1
-  google_fonts: ^6.2.1
+  google_fonts: ^6.1.1
   path_provider: ^2.1.2
   dio: ^5.4.1
   http: ^1.2.1

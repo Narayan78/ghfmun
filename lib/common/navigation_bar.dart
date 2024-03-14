@@ -3,8 +3,6 @@ import 'package:ghfmun/common/nav_button.dart';
 import 'package:ghfmun/features/contact_us/screens/contact_us.dart';
 import 'package:ghfmun/features/home_page/screens/home.dart';
 import 'package:ghfmun/features/join_us/screens/join_us.dart';
-import 'dart:html' as html;
-
 import '../features/about_us/screens/about_us.dart';
 
 class NavigationBarWidget extends StatelessWidget {
@@ -108,5 +106,5 @@ void navigateToPage(BuildContext context, Widget page, String url) {
     context,
     MaterialPageRoute(builder: (context) => page),
   );
-  html.window.history.pushState(null, 'Page', url);
+//  html.window.history.pushState(null, 'Page', url);
 }

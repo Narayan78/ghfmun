@@ -9,16 +9,17 @@ class LogoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Color.fromARGB(255, 94, 153, 236), Colors.green],
-        ),
+        color: Color.fromARGB(255, 1, 41, 74),
+        // gradient: LinearGradient(
+        //   begin: Alignment.topCenter,
+        //   end: Alignment.bottomCenter,
+        //   colors: [Color.fromARGB(255, 94, 153, 236), Colors.green],
+        // ),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(30),
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(10),
+          bottomRight: Radius.circular(20),
+          topLeft: Radius.circular(0),
+          topRight: Radius.circular(0),
         ),
         //  color: Color.fromARGB(255, 94, 153, 236),
 
