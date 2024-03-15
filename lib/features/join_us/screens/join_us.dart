@@ -12,7 +12,6 @@ class JoinUs extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
 
     return SafeArea(
-
       child: Scaffold(
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -23,7 +22,7 @@ class JoinUs extends StatelessWidget {
                   const NavigationBarWidget(),
                   Container(
                     color: const Color.fromARGB(255, 255, 255, 255),
-                    height:  screenSize.height * 0.5,
+                 //   height: screenSize.height * 0.5,
                     width: screenSize.width,
                     child: const Center(
                       child: Padding(
@@ -44,7 +43,7 @@ class JoinUs extends StatelessWidget {
                               height: 20,
                             ),
                             Text(
-                            //  textAlign: TextAlign.justify,
+                               textAlign: TextAlign.justify,
                               "The Global Help Foundation Model United Nations (GHFMUN) is a platform for"
                               " young leaders to engage in diplomatic discussions and debates on global issues."
                               " GHFMUN is a simulation of the United Nations, where students take on the role of "
@@ -52,7 +51,7 @@ class JoinUs extends StatelessWidget {
                               " is a platform for young leaders to engage in diplomatic discussions and debates on"
                               " global issues. GHFMUN is a simulation of the United Nations, where students take on"
                               "the role of delegates, representing different countries and debating on global issues.",
-                              overflow: TextOverflow.ellipsis,
+                            //  overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 fontSize: 20,
                               ),
@@ -69,14 +68,16 @@ class JoinUs extends StatelessWidget {
                   const FooterSection()
                 ],
               ),
-            screenSize.width >= 650 ?  Positioned(
-                top: screenSize.height * 0,
-                left: screenSize.width * 0.1,
-                child: LogoContainer(
-                  height: screenSize.height * 0.2,
-                  width: screenSize.height * 0.17,
-                ),
-              ) : const SizedBox()
+              screenSize.width >= 650
+                  ? Positioned(
+                      top: screenSize.height * 0,
+                      left: screenSize.width * 0.1,
+                      child: LogoContainer(
+                        height: screenSize.height * 0.2,
+                        width: screenSize.height * 0.17,
+                      ),
+                    )
+                  : const SizedBox()
             ],
           ),
         ),

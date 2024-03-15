@@ -21,14 +21,35 @@ class NavigationBarWidget extends StatelessWidget {
           ? Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const Spacer(),
+                 SizedBox(width:  size.width * 0.16),
+                size.width <= 1200
+                    ? const SizedBox(
+                        width: 90,
+                      )
+                    : const SizedBox( width:  50,),
+                size.width >=1100
+                    ? const Text(
+                        "Global Help Foundation Model United Nation",
+                        style: TextStyle(
+                            color: Color(0xffeee8bb),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600),
+                      )
+                    : size.width >= 860
+                        ? const Text("GHFMUN",
+                            style: TextStyle(
+                                color: Color(0xffeee8bb),
+                                fontSize: 25,
+                                fontWeight: FontWeight.w600))
+                        : const SizedBox(),
+                 const Spacer(),
                 navigationButton(
                     context, "Home", const HomePage(), "contact-us"),
                 navigationButton(
                     context, "About us", const AboutUs(), "about-us"),
-                navigationButton(context, "join us", const JoinUs(), "join-us"),
+                navigationButton(context, "Join us", const JoinUs(), "join-us"),
                 navigationButton(
-                    context, "contact us", const ContactUs(), "contact-us"),
+                    context, "Contact us", const ContactUs(), "contact-us"),
                 SizedBox(width: size.width * 0.002)
               ],
             )
@@ -43,38 +64,40 @@ class NavigationBarWidget extends StatelessWidget {
                       context: context,
                       position: const RelativeRect.fromLTRB(100, 0, 0, 0),
                       items: [
-                       const PopupMenuItem<int>(
+                        const PopupMenuItem<int>(
                           value: 0,
                           child: Text('Home'),
                         ),
-                       const PopupMenuItem<int>(
+                        const PopupMenuItem<int>(
                           value: 1,
                           child: Text('About Us'),
                         ),
-                       const PopupMenuItem<int>(
+                        const PopupMenuItem<int>(
                           value: 2,
                           child: Text('Join Us'),
                         ),
-                       const PopupMenuItem<int>(
+                        const PopupMenuItem<int>(
                           value: 3,
                           child: Text('Contact Us'),
                         ),
                       ],
                     ).then((value) {
-                     
                       if (value != null) {
                         switch (value) {
                           case 0:
-                            navigateToPage(context, const HomePage(), "home-page" );
+                            navigateToPage(
+                                context, const HomePage(), "home-page");
                             break;
                           case 1:
-                            navigateToPage(context, const AboutUs(), "About us" );
+                            navigateToPage(
+                                context, const AboutUs(), "About us");
                             break;
                           case 2:
-                             navigateToPage(context, const JoinUs(), "join-us" );
+                            navigateToPage(context, const JoinUs(), "Join-us");
                             break;
                           case 3:
-                            navigateToPage(context, const ContactUs(), "contact-us" );
+                            navigateToPage(
+                                context, const ContactUs(), "Contact-us");
                             break;
                         }
                       }

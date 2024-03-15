@@ -86,101 +86,16 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      size.width >= 800
-                          ? Positioned(
-                              bottom: size.height * 0.05,
-                              left: size.width * 0.27,
-                              child: Container(
-                                  decoration: const BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color.fromARGB(255, 0, 0, 0),
-                                        Colors.transparent,
-                                        Color.fromARGB(255, 0, 0, 0)
-                                      ],
-                                    ),
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(20),
-                                      bottomRight: Radius.circular(50),
-                                      topLeft: Radius.circular(50),
-                                      topRight: Radius.circular(20),
-                                    ),
-                                  ),
-                                  height: size.height * 0.2,
-                                  width: size.width * 0.5,
-                                  child: Column(
-                                    children: [
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      const Text(
-                                        "GHF MUN",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
-                                      size.width >= 600
-                                          ? const Text(
-                                              "The Global Help Foundation Model United Nations",
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          : const SizedBox(),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          size.width <= 600
-                                              ? const SizedBox(
-                                                  width: double.infinity,
-                                                )
-                                              : const SizedBox(),
-                                          ElevatedButton(
-                                            onPressed: () async {
-                                              await launchUrl(
-                                                Uri.parse(
-                                                    "https://forms.gle/iekn78p2D1kjMxLV7"),
-                                              );
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              // primary: Colors.white,
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 20,
-                                                      vertical: 10),
-                                            ),
-                                            child: const Text(
-                                              "Register Now",
-                                              style: TextStyle(
-                                                  color: Color.fromARGB(
-                                                      255, 33, 35, 37),
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 18,
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  )),
-                            )
-                          : Positioned(
-                              bottom: size.height * 0.03,
-                              left: size.width * 0.35,
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SizedBox(
+                              height: size.width >= 800
+                                  ? size.height * 0.8
+                                  : size.height * 0.3),
+                          SizedBox(
+                            width: double.infinity,
+                            child: Center(
                               child: ElevatedButton(
                                 onPressed: () async {
                                   await launchUrl(
@@ -189,9 +104,11 @@ class HomePage extends StatelessWidget {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  // primary: Colors.white,
+                                  fixedSize: const Size(200, 35),
                                   padding: const EdgeInsets.symmetric(
-                                      horizontal: 20, vertical: 10),
+                                    horizontal: 20,
+                                    vertical: 10,
+                                  ),
                                 ),
                                 child: const Text(
                                   "Register Now",
@@ -202,6 +119,106 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                             ),
+                          ),
+                        ],
+                      )
+                      // size.width >= 800
+                      //     ? Positioned(
+                      //         bottom: size.height * 0.05,
+                      //         left: size.width * 0.27,
+                      //         child: Container(
+                      //             decoration: const BoxDecoration(
+                      //               gradient: LinearGradient(
+                      //                 begin: Alignment.topCenter,
+                      //                 end: Alignment.bottomCenter,
+                      //                 colors: [
+                      //                   Color.fromARGB(255, 0, 0, 0),
+                      //                   Colors.transparent,
+                      //                   Color.fromARGB(255, 0, 0, 0)
+                      //                 ],
+                      //               ),
+                      //               borderRadius: BorderRadius.only(
+                      //                 bottomLeft: Radius.circular(20),
+                      //                 bottomRight: Radius.circular(50),
+                      //                 topLeft: Radius.circular(50),
+                      //                 topRight: Radius.circular(20),
+                      //               ),
+                      //             ),
+                      //             height: size.height * 0.2,
+                      //             width: size.width * 0.5,
+                      //             child: Column(
+                      //               children: [
+                      //                 const SizedBox(
+                      //                   height: 5,
+                      //                 ),
+                      //                 const Text(
+                      //                   "GHF MUN",
+                      //                   style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontSize: 30,
+                      //                       fontWeight: FontWeight.bold),
+                      //                 ),
+                      //                 const SizedBox(
+                      //                   height: 5,
+                      //                 ),
+                      //                 size.width >= 600
+                      //                     ? const Text(
+                      //                         "The Global Help Foundation Model United Nations",
+                      //                         textAlign: TextAlign.center,
+                      //                         style: TextStyle(
+                      //                             color: Colors.white,
+                      //                             fontSize: 18,
+                      //                             fontWeight: FontWeight.bold),
+                      //                       )
+                      //                     : const SizedBox(),
+                      //                 const SizedBox(
+                      //                   height: 10,
+                      //                 ),
+                      //                 Row(
+                      //                   mainAxisAlignment:
+                      //                       MainAxisAlignment.center,
+                      //                   children: [
+                      //                     size.width <= 600
+                      //                         ? const SizedBox(
+                      //                             width: double.infinity,
+                      //                           )
+                      //                         : const SizedBox(),
+                      //                     ElevatedButton(
+                      //                       onPressed: () async {
+                      //                         await launchUrl(
+                      //                           Uri.parse(
+                      //                               "https://forms.gle/iekn78p2D1kjMxLV7"),
+                      //                         );
+                      //                       },
+                      //                       style: ElevatedButton.styleFrom(
+                      //                         // primary: Colors.white,
+                      //                         padding:
+                      //                             const EdgeInsets.symmetric(
+                      //                                 horizontal: 20,
+                      //                                 vertical: 10),
+                      //                       ),
+                      //                       child: const Text(
+                      //                         "Register Now",
+                      //                         style: TextStyle(
+                      //                             color: Color.fromARGB(
+                      //                                 255, 33, 35, 37),
+                      //                             fontSize: 18,
+                      //                             fontWeight: FontWeight.bold),
+                      //                       ),
+                      //                     ),
+                      //                     const SizedBox(
+                      //                       width: 18,
+                      //                     ),
+                      //                   ],
+                      //                 )
+                      //               ],
+                      //             )),
+                      //       )
+                      //  Positioned(
+                      //     bottom: size.height * 0.03,
+                      //     left: size.width * 0.35,
+                      //     child:
+                      //   ),
                     ],
                   ),
                   const SizedBox(
