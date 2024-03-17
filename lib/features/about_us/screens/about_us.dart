@@ -3,6 +3,7 @@ import 'package:ghfmun/features/about_us/screens/components/Faq_button.dart';
 import '../../../common/footer.dart';
 import '../../../common/logoContainer.dart';
 import '../../../common/navigation_bar.dart';
+import '../../../models/committeeModel.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
@@ -38,6 +39,7 @@ class AboutUs extends StatelessWidget {
                           const Row(
                             children: [
                               Spacer(),
+                              SizedBox(width: 55,),
                               Text(
                                 "About Us",
                                 style: TextStyle(
@@ -79,24 +81,22 @@ class AboutUs extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                  //   child: SizedBox(
-                  //     child: Expanded(
-                  //       child: ListView.builder(
-                  //           shrinkWrap: true,
-                  //           itemCount: committeeList.length,
-                  //           itemBuilder: (context, index) {
-                  //             return _buildCommitteeTile(
-                  //                 context,
-                  //                 committeeList[index].committeeName,
-                  //                 committeeList[index].reserceTopic,
-                  //              //   committeeList[index].description
-                  //              );
-                  //           }),
-                  //     ),
-                  //   ),
-                  // ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                    child: SizedBox(
+                      child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: committeeList.length,
+                          itemBuilder: (context, index) {
+                            return _buildCommitteeTile(
+                              context,
+                              committeeList[index].committeeName,
+                              committeeList[index].reserceTopic,
+                              //   committeeList[index].description
+                            );
+                          }),
+                    ),
+                  ),
                   const FooterSection(),
                 ],
               ),
@@ -105,7 +105,7 @@ class AboutUs extends StatelessWidget {
                       top: screenSize.height * 0,
                       left: screenSize.width * 0.1,
                       child: LogoContainer(
-                        height: screenSize.height * 0.2,
+                        height: screenSize.height * 0.18,
                         width: screenSize.height * 0.17,
                       ),
                     )

@@ -49,7 +49,7 @@ class NavigationBarWidget extends StatelessWidget {
                     context, "About us", const AboutUs(), "about-us"),
                 navigationButton(context, "Join us", const JoinUs(), "join-us"),
                 navigationButton(
-                    context, "Contact us", const ContactUs(), "contact-us"),
+                    context, "Contact us",  ContactUs(), "contact-us"),
                 SizedBox(width: size.width * 0.002)
               ],
             )
@@ -97,7 +97,7 @@ class NavigationBarWidget extends StatelessWidget {
                             break;
                           case 3:
                             navigateToPage(
-                                context, const ContactUs(), "Contact-us");
+                                context,  ContactUs(), "Contact-us");
                             break;
                         }
                       }
