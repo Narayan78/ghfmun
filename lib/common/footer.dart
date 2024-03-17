@@ -12,36 +12,43 @@ class FooterSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        const  Expanded(
+          const  SizedBox(width: 100,),
+          const Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "Global Help Foundation Model United Nations",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  "© 2024 GHF MUN. All Rights Reserved.",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  "Designed and Developed by: Team GHF MUN",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                  ),
+               
+                Column(
+                  children: [
+                   
+                    Text(
+                      "Global Help Foundation Model United Nations",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "© 2024 GHF MUN. All Rights Reserved.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Designed and Developed by: Team GHF MUN",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -51,7 +58,7 @@ class FooterSection extends StatelessWidget {
             width: 100, // Adjust image width as needed
             height: size.height * 0.15, // Adjust image height as needed
           ),
-         const SizedBox(width: 20),
+          const SizedBox(width: 20),
         ],
       ),
     );

@@ -65,7 +65,7 @@ final List<TeamModels> teamList = [
     TeamModels(
     name: "Saraswati Kayastha",
     imageUrl:
-        "assets/teams/saru.jpg",
+        "assets/teams/Saru.jpg",
     position: "Office Assistance",
   ),
 ];
