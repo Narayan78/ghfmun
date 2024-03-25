@@ -4,7 +4,6 @@ import 'package:ghfmun/features/home_page/models/user_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../controller/enquiry_controller.dart';
-import '../../repository/send_mail.dart';
 
 //, WidgetRef ref
 class PriceDetail extends StatelessWidget {
@@ -260,7 +259,7 @@ class PriceDetail extends StatelessWidget {
             child: Padding(
               padding: screenSize.width >= 650
                   ? const EdgeInsets.only(left: 40.0, right: 60)
-                  : EdgeInsets.all(20),
+                  : const EdgeInsets.all(20),
               child: Form(
                 key: _formKey,
                 child: Column(
@@ -374,7 +373,7 @@ class PriceDetail extends StatelessWidget {
                               minimumSize:
                                   MaterialStateProperty.all(Size(250, 42)),
                               backgroundColor: MaterialStateProperty.all(
-                                Color.fromARGB(255, 204, 239, 248),
+                                const Color.fromARGB(255, 204, 239, 248),
                               ),
                             ),
                             onPressed: () {
