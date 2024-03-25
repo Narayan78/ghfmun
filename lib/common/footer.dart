@@ -12,16 +12,16 @@ class FooterSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const  SizedBox(width: 100,),
+          const SizedBox(
+            width: 100,
+          ),
           const Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               
                 Column(
                   children: [
-                   
                     Text(
                       "Global Help Foundation Model United Nations",
                       style: TextStyle(

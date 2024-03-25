@@ -97,7 +97,7 @@ class NavigationBarWidget extends StatelessWidget {
                             break;
                           case 3:
                             navigateToPage(
-                                context,  ContactUs(), "Contact-us");
+                                context,  const ContactUs(), "Contact-us");
                             break;
                         }
                       }

@@ -9,7 +9,7 @@ class AgendaModel {
 
 final List<AgendaModel> agendaModel = [
   AgendaModel(
-    headlineText: "Day 1: Saturday, April 6, 2024 ",
+    headlineText: "Day 1: Thursday, May 23, 2024 ",
     title: "Opening Ceremony and Committee Sessions",
     text: "*  Registration and Delegate Check-In\n"
         "*  Keynote Speech on the Importance of Youth Migration and Sustainable Development\n"
@@ -19,15 +19,15 @@ final List<AgendaModel> agendaModel = [
         "*   Delegates showcase their countries' cultures, fostering cultural exchange",
   ),
   AgendaModel(
-    headlineText: "Day 2: Sunday, April 7, 2024 ",
+    headlineText: "Day 2: Friday, May 24, 2024 ",
     title: "Committee Sessions and Special Events",
     text:
-        " *  UnHRC: Protecting The Rights of Migrants Youth: Addressing Legal and Social Challenges\n"
+        "*  UnHRC: Protecting The Rights of Migrants Youth: Addressing Legal and Social Challenges\n"
         "*  UNESCO: Preserving Cultural Heritages in the Face of Youth Migrations\n"
         "*  IOM: Developing a Comprehensive Global Framework for Managing Youth Migration\n",
   ),
   AgendaModel(
-    headlineText: "Day 3: Monday, April 8, 2024",
+    headlineText: "Day 3: Saturday, May 25, 2024",
     title: "Diplomacy and Collaboration",
     text:
         "*  Committees continue with working sessions or prepare for the final plenary\n"

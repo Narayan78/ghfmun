@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                                 onPressed: () async {
                                   await launchUrl(
                                     Uri.parse(
-                                        "https://forms.gle/iekn78p2D1kjMxLV7"),
+                                        "https://forms.gle/tz8u7HkyeMfcae8MA"),
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
@@ -264,7 +264,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const PriceDetail(),
                   const SizedBox(
-                    height: 20,
+                    height: 70,
                   ),
                   const FooterSection()
                 ],

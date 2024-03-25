@@ -96,7 +96,7 @@ class ContactUs extends StatelessWidget {
                                                 Object exception,
                                                 StackTrace? stackTrace) {
                                               // Display a placeholder or error message when image loading fails
-                                              return Placeholder();
+                                              return const Placeholder();
                                             },
                                           ),
                                         ),
@@ -156,56 +156,56 @@ class ContactUs extends StatelessWidget {
 }
 
 // Function to show the popup dialog
-Future<void> _showDialog(
-    String message, BuildContext context, TextEditingController pin) async {
-  return showDialog<void>(
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        content: Wrap(
-          children: [
-            Text(
-              message,
-              style: const TextStyle(fontSize: 18),
-            ),
-            TextField(
-              controller: pin,
-              obscureText: true, // Mask the entered PIN for security
-            )
-          ],
-        ),
-        actions: <Widget>[
-          TextButton(
-            onPressed: () {
-              final enteredPin = pin.text;
-              const expectedPin = "1234"; // Replace with your expected PIN
+// Future<void> _showDialog(
+//     String message, BuildContext context, TextEditingController pin) async {
+//   return showDialog<void>(
+//     context: context,
+//     builder: (BuildContext context) {
+//       return AlertDialog(
+//         content: Wrap(
+//           children: [
+//             Text(
+//               message,
+//               style: const TextStyle(fontSize: 18),
+//             ),
+//             TextField(
+//               controller: pin,
+//               obscureText: true, // Mask the entered PIN for security
+//             )
+//           ],
+//         ),
+//         actions: <Widget>[
+//           TextButton(
+//             onPressed: () {
+//               final enteredPin = pin.text;
+//               const expectedPin = "1234"; // Replace with your expected PIN
 
-              if (enteredPin == expectedPin) {
-                // Navigate to the next page if the PIN is correct
-                // Navigator.push(
-                //   context,
-                //   PageRouteBuilder(
-                //     pageBuilder: (context, animation, secondaryAnimation) =>
-                //         const ShowAllEnquiry(),
-                //     transitionsBuilder:
-                //         (context, animation, secondaryAnimation, child) {
-                //       return FadeTransition(
-                //         opacity: animation,
-                //         child: child,
-                //       );
-                //     },
-                //   ),
-                // );
-              } else {
-                Navigator.pop(context);
-              }
+//               if (enteredPin == expectedPin) {
+//                 // Navigate to the next page if the PIN is correct
+//                 // Navigator.push(
+//                 //   context,
+//                 //   PageRouteBuilder(
+//                 //     pageBuilder: (context, animation, secondaryAnimation) =>
+//                 //         const ShowAllEnquiry(),
+//                 //     transitionsBuilder:
+//                 //         (context, animation, secondaryAnimation, child) {
+//                 //       return FadeTransition(
+//                 //         opacity: animation,
+//                 //         child: child,
+//                 //       );
+//                 //     },
+//                 //   ),
+//                 // );
+//               } else {
+//                 Navigator.pop(context);
+//               }
 
-              // Close the dialog
-            },
-            child: const Text('OK'),
-          ),
-        ],
-      );
-    },
-  );
-}
+//               // Close the dialog
+//             },
+//             child: const Text('OK'),
+//           ),
+//         ],
+//       );
+//     },
+//   );
+// }
