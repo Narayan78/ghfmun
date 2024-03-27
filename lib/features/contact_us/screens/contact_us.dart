@@ -80,7 +80,7 @@ class ContactUs extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         width: 300,
                                         height: 500,
                                         child: ClipRRect(
@@ -93,7 +93,7 @@ class ContactUs extends StatelessWidget {
                                                 Object exception,
                                                 StackTrace? stackTrace) {
                                               // Display a placeholder or error message when image loading fails
-                                              return const Placeholder();
+                                              return  Image.asset("assets/errorPerson.jpg");
                                             },
                                           ),
                                         ),

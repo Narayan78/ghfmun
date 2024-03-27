@@ -10,7 +10,7 @@ class TeamModels {
 final List<TeamModels> teamList = [
   TeamModels(
     name: "Sanjeeb Bhattarai",
-    imageUrl: "assets/teams/sanjeeb-bhattarai.jdpg",
+    imageUrl: "assets/teams/sanjeeb-bhattarai.jpg",
     position: "Chairperson",
   ),
   TeamModels(
