@@ -62,11 +62,12 @@ class ContactUs extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 50, horizontal: 2),
                             gridDelegate:
-                                 SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: screenSize.width >= 1090 ?  2 : 1,
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: screenSize.width >= 1090 ? 2 : 1,
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10,
-                              childAspectRatio: screenSize.width >= 1090 ? 3 / 1.5 : 3/0.9,
+                              childAspectRatio:
+                                  screenSize.width >= 1090 ? 3 / 1.5 : 3 / 0.9,
                             ),
                             itemCount: teamList.length,
                             itemBuilder: (BuildContext context, int index) {
@@ -75,10 +76,6 @@ class ContactUs extends StatelessWidget {
                                 child: Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    // border: Border.all(
-                                    //   color: const Color.fromARGB(
-                                    //       255, 214, 212, 212),
-                                    // ),
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: Row(
@@ -102,14 +99,23 @@ class ContactUs extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only( left:15.0),
+                                        padding:
+                                            const EdgeInsets.only(left: 15.0),
                                         child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                              teamList[index].name, style: const TextStyle(fontSize: 20 , fontWeight: FontWeight.w600),
+                                              teamList[index].name,
+                                              style: const TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w600),
                                             ),
-                                            Text(teamList[index].position , style: const TextStyle(fontSize: 15),),
+                                            Text(
+                                              teamList[index].position,
+                                              style:
+                                                  const TextStyle(fontSize: 15),
+                                            ),
                                           ],
                                         ),
                                       )
