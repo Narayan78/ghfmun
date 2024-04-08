@@ -30,15 +30,25 @@ class ContactUs extends StatelessWidget {
                           height: 50,
                           width: double.infinity,
                           color: const Color.fromARGB(255, 96, 155, 204),
-                          child: const Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Text(
-                                "Email: info@globalhelpfoundation.org   Phone: +977 9851041063   Address: Naxal,"
-                                " Kathmandu Nepal",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              SizedBox(
+                              screenSize.width >= 1080
+                                  ? const Text(
+                                      "Email: info@globalhelpfoundation.org   Phone: +977 9851041063   Address: Naxal,"
+                                      " Kathmandu Nepal",
+                                      style: TextStyle(fontSize: 18),
+                                    )
+                                  : screenSize.width >= 760
+                                      ? const Text(
+                                          "Email: info@globalhelpfoundation.org   Phone: +977 9851041063 ",
+                                          style: TextStyle(fontSize: 18),
+                                        )
+                                      : const Text(
+                                          "Email: info@globalhelpfoundation.org",
+                                          style: TextStyle(fontSize: 18),
+                                        ),
+                              const SizedBox(
                                 width: 20,
                               )
                             ],
@@ -93,7 +103,8 @@ class ContactUs extends StatelessWidget {
                                                 Object exception,
                                                 StackTrace? stackTrace) {
                                               // Display a placeholder or error message when image loading fails
-                                              return  Image.asset("assets/errorPerson.jpg");
+                                              return Image.asset(
+                                                  "assets/errorPerson.jpg");
                                             },
                                           ),
                                         ),

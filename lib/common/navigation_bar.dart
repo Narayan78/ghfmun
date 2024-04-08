@@ -3,6 +3,7 @@ import 'package:ghfmun/common/nav_button.dart';
 import 'package:ghfmun/features/contact_us/screens/contact_us.dart';
 import 'package:ghfmun/features/home_page/screens/home.dart';
 import 'package:ghfmun/features/join_us/screens/join_us.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../features/about_us/screens/about_us.dart';
 
 class NavigationBarWidget extends StatelessWidget {
@@ -13,6 +14,13 @@ class NavigationBarWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     print("width :" "${size.width}");
     print("height :" "${size.height}");
+
+    void urlLuncher() async {
+      await launchUrl(
+        Uri.parse("https://forms.gle/tz8u7HkyeMfcae8MA"),
+      );
+    }
+
     return Container(
       decoration: const BoxDecoration(color: Color.fromARGB(255, 4, 65, 116)),
       height: size.height * 0.1,
@@ -21,13 +29,11 @@ class NavigationBarWidget extends StatelessWidget {
           ? Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                 SizedBox(width:  size.width * 0.16),
+                SizedBox(width: size.width * 0.16),
                 size.width <= 1200
-                    ? const SizedBox(
-                        width: 90,
-                      )
-                    : const SizedBox( width:  50,),
-                size.width >=1100
+                    ? const SizedBox(width: 90)
+                    : const SizedBox(width: 50),
+                size.width >= 1100
                     ? const Text(
                         "Global Help Foundation Model United Nation",
                         style: TextStyle(
@@ -42,14 +48,20 @@ class NavigationBarWidget extends StatelessWidget {
                                 fontSize: 25,
                                 fontWeight: FontWeight.w600))
                         : const SizedBox(),
-                 const Spacer(),
+                const Spacer(),
+                NavigationButton(
+                    buttonText: "Registration",
+                    onPressed: () {
+                      urlLuncher();
+                    }),
+                // navigationButton(
+                //     context, "Registration", const HomePage(), "contact-us"),
+                navigationButton(context, "Agenda", const JoinUs(), "Agenda"),
+
                 navigationButton(
-                    context, "Home", const HomePage(), "contact-us"),
+                    context, "Committee", const AboutUs(), "Committee"),
                 navigationButton(
-                    context, "About us", const AboutUs(), "about-us"),
-                navigationButton(context, "Join us", const JoinUs(), "join-us"),
-                navigationButton(
-                    context, "Contact us",  ContactUs(), "contact-us"),
+                    context, "Contact us", const ContactUs(), "contact-us"),
                 SizedBox(width: size.width * 0.002)
               ],
             )
@@ -66,7 +78,7 @@ class NavigationBarWidget extends StatelessWidget {
                       items: [
                         const PopupMenuItem<int>(
                           value: 0,
-                          child: Text('Home'),
+                          child: Text('Registration'),
                         ),
                         const PopupMenuItem<int>(
                           value: 1,
@@ -85,8 +97,9 @@ class NavigationBarWidget extends StatelessWidget {
                       if (value != null) {
                         switch (value) {
                           case 0:
-                            navigateToPage(
-                                context, const HomePage(), "home-page");
+                            urlLuncher();
+                            // navigateToPage(
+                            //     context, const HomePage(), "home-page");
                             break;
                           case 1:
                             navigateToPage(
@@ -97,7 +110,7 @@ class NavigationBarWidget extends StatelessWidget {
                             break;
                           case 3:
                             navigateToPage(
-                                context,  const ContactUs(), "Contact-us");
+                                context, const ContactUs(), "Contact-us");
                             break;
                         }
                       }

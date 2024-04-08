@@ -39,11 +39,6 @@ final List<TeamModels> teamList = [
     position: "Operation Manager",
   ),
   TeamModels(
-    name: "Kiran Bam Thakuri",
-    imageUrl: "assets/teams/kiran-bam.jpg",
-    position: "Associates Officer",
-  ),
-  TeamModels(
     name: "Khushi Dhital",
     imageUrl: "assets/teams/khushi-dhital.jpeg",
     position: "Executive Correspondent",
@@ -52,6 +47,11 @@ final List<TeamModels> teamList = [
     name: "Deepa Katwal",
     imageUrl: "assets/teams/deepa-katwal.jpeg",
     position: "Documentation Officer",
+  ),
+  TeamModels(
+    name: "Kiran Bam Thakuri",
+    imageUrl: "assets/teams/kiran-bam.jpg",
+    position: "Visa Officer",
   ),
   TeamModels(
     name: "Narayan Kandel",

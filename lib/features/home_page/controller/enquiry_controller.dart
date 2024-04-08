@@ -12,7 +12,9 @@ class EnquiryController extends StateNotifier<EnquiryState> {
   EnquiryController(
     super.state,
     this.enquiryRepository,
-  );
+  ){
+    //sendEnquiry(email, phoneNumber, query)
+  }
 
   Future<void> sendEnquiry(
       String email, String phoneNumber, String query) async {

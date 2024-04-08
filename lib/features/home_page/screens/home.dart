@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common/logoContainer.dart';
+import 'package:ghfmun/features/home_page/screens/home_components/our_programs.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/training.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/why_us.dart';
 import 'package:ghfmun/common/footer.dart';
@@ -122,103 +123,6 @@ class HomePage extends StatelessWidget {
                           ),
                         ],
                       )
-                      // size.width >= 800
-                      //     ? Positioned(
-                      //         bottom: size.height * 0.05,
-                      //         left: size.width * 0.27,
-                      //         child: Container(
-                      //             decoration: const BoxDecoration(
-                      //               gradient: LinearGradient(
-                      //                 begin: Alignment.topCenter,
-                      //                 end: Alignment.bottomCenter,
-                      //                 colors: [
-                      //                   Color.fromARGB(255, 0, 0, 0),
-                      //                   Colors.transparent,
-                      //                   Color.fromARGB(255, 0, 0, 0)
-                      //                 ],
-                      //               ),
-                      //               borderRadius: BorderRadius.only(
-                      //                 bottomLeft: Radius.circular(20),
-                      //                 bottomRight: Radius.circular(50),
-                      //                 topLeft: Radius.circular(50),
-                      //                 topRight: Radius.circular(20),
-                      //               ),
-                      //             ),
-                      //             height: size.height * 0.2,
-                      //             width: size.width * 0.5,
-                      //             child: Column(
-                      //               children: [
-                      //                 const SizedBox(
-                      //                   height: 5,
-                      //                 ),
-                      //                 const Text(
-                      //                   "GHF MUN",
-                      //                   style: TextStyle(
-                      //                       color: Colors.white,
-                      //                       fontSize: 30,
-                      //                       fontWeight: FontWeight.bold),
-                      //                 ),
-                      //                 const SizedBox(
-                      //                   height: 5,
-                      //                 ),
-                      //                 size.width >= 600
-                      //                     ? const Text(
-                      //                         "The Global Help Foundation Model United Nations",
-                      //                         textAlign: TextAlign.center,
-                      //                         style: TextStyle(
-                      //                             color: Colors.white,
-                      //                             fontSize: 18,
-                      //                             fontWeight: FontWeight.bold),
-                      //                       )
-                      //                     : const SizedBox(),
-                      //                 const SizedBox(
-                      //                   height: 10,
-                      //                 ),
-                      //                 Row(
-                      //                   mainAxisAlignment:
-                      //                       MainAxisAlignment.center,
-                      //                   children: [
-                      //                     size.width <= 600
-                      //                         ? const SizedBox(
-                      //                             width: double.infinity,
-                      //                           )
-                      //                         : const SizedBox(),
-                      //                     ElevatedButton(
-                      //                       onPressed: () async {
-                      //                         await launchUrl(
-                      //                           Uri.parse(
-                      //                               "https://forms.gle/iekn78p2D1kjMxLV7"),
-                      //                         );
-                      //                       },
-                      //                       style: ElevatedButton.styleFrom(
-                      //                         // primary: Colors.white,
-                      //                         padding:
-                      //                             const EdgeInsets.symmetric(
-                      //                                 horizontal: 20,
-                      //                                 vertical: 10),
-                      //                       ),
-                      //                       child: const Text(
-                      //                         "Register Now",
-                      //                         style: TextStyle(
-                      //                             color: Color.fromARGB(
-                      //                                 255, 33, 35, 37),
-                      //                             fontSize: 18,
-                      //                             fontWeight: FontWeight.bold),
-                      //                       ),
-                      //                     ),
-                      //                     const SizedBox(
-                      //                       width: 18,
-                      //                     ),
-                      //                   ],
-                      //                 )
-                      //               ],
-                      //             )),
-                      //       )
-                      //  Positioned(
-                      //     bottom: size.height * 0.03,
-                      //     left: size.width * 0.35,
-                      //     child:
-                      //   ),
                     ],
                   ),
                   const SizedBox(
@@ -263,9 +167,12 @@ class HomePage extends StatelessWidget {
                     height: 50,
                   ),
                   const PriceDetail(),
-                  const SizedBox(
-                    height: 70,
-                  ),
+                  //  const SizedBox(
+                  //   height: 250,
+                 
+                  //    child:  ButterFlyAssetVideo(),
+                  // ),
+                  const SizedBox(height: 70),
                   const FooterSection()
                 ],
               ),

@@ -371,7 +371,7 @@ class PriceDetail extends StatelessWidget {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               minimumSize:
-                                  MaterialStateProperty.all(Size(250, 42)),
+                                  MaterialStateProperty.all(    Size(250, 42)),
                               backgroundColor: MaterialStateProperty.all(
                                 const Color.fromARGB(255, 204, 239, 248),
                               ),
