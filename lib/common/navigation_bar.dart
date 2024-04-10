@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common/nav_button.dart';
-import 'package:ghfmun/features/contact_us/screens/contact_us.dart';
+import 'package:ghfmun/features/our_team/screens/contact_us.dart';
 import 'package:ghfmun/features/home_page/screens/home.dart';
-import 'package:ghfmun/features/join_us/screens/join_us.dart';
+import 'package:ghfmun/features/agendas/screens/agenda.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../features/about_us/screens/about_us.dart';
+import '../features/committee/screens/about_us.dart';
 
 class NavigationBarWidget extends StatelessWidget {
   const NavigationBarWidget({super.key});
@@ -56,12 +56,12 @@ class NavigationBarWidget extends StatelessWidget {
                     }),
                 // navigationButton(
                 //     context, "Registration", const HomePage(), "contact-us"),
-                navigationButton(context, "Agenda", const JoinUs(), "Agenda"),
+                navigationButton(context, "Agenda", const Agenda(), "Agenda"),
 
                 navigationButton(
-                    context, "Committee", const AboutUs(), "Committee"),
+                    context, "Committee", const Committee(), "Committee"),
                 navigationButton(
-                    context, "Contact us", const ContactUs(), "contact-us"),
+                    context, "Our Team", const ContactUs(), "contact-us"),
                 SizedBox(width: size.width * 0.002)
               ],
             )
@@ -82,15 +82,15 @@ class NavigationBarWidget extends StatelessWidget {
                         ),
                         const PopupMenuItem<int>(
                           value: 1,
-                          child: Text('About Us'),
+                          child: Text('Agenda'),
                         ),
                         const PopupMenuItem<int>(
                           value: 2,
-                          child: Text('Join Us'),
+                          child: Text('Committee'),
                         ),
                         const PopupMenuItem<int>(
                           value: 3,
-                          child: Text('Contact Us'),
+                          child: Text('Our Team'),
                         ),
                       ],
                     ).then((value) {
@@ -98,15 +98,14 @@ class NavigationBarWidget extends StatelessWidget {
                         switch (value) {
                           case 0:
                             urlLuncher();
-                            // navigateToPage(
-                            //     context, const HomePage(), "home-page");
+
                             break;
                           case 1:
                             navigateToPage(
-                                context, const AboutUs(), "About us");
+                                context, const Committee(), "About us");
                             break;
                           case 2:
-                            navigateToPage(context, const JoinUs(), "Join-us");
+                            navigateToPage(context, const Agenda(), "Join-us");
                             break;
                           case 3:
                             navigateToPage(

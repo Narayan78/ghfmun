@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ghfmun/features/about_us/screens/components/faqs.dart';
+import 'package:ghfmun/features/committee/screens/components/faqs.dart';
 
 class FaqButton extends StatelessWidget {
   const FaqButton({super.key});

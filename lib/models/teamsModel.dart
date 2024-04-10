@@ -3,30 +3,33 @@ class TeamModels {
   final String position;
   final String imageUrl;
 
-  TeamModels(
-      {required this.name, required this.imageUrl, required this.position});
+  TeamModels({
+    required this.name,
+    required this.imageUrl,
+    required this.position,
+  });
 }
 
 final List<TeamModels> teamList = [
   TeamModels(
     name: "Sanjeeb Bhattarai",
     imageUrl: "assets/teams/sanjeeb-bhattarai.jpg",
-    position: "Chairperson",
-  ),
-  TeamModels(
-    name: "Prakash Khadka",
-    imageUrl: "assets/teams/prakash-khadka.jpg",
-    position: "Director",
+    position: "Event Director",
   ),
   TeamModels(
     name: "Samjhana Aryal",
     imageUrl: "assets/teams/samjhana-aryal.jpg",
-    position: "Director",
+    position: "Event Director",
+  ),
+  TeamModels(
+    name: "Prakash Khadka",
+    imageUrl: "assets/teams/prakash-khadka.jpg",
+    position: "Event Director",
   ),
   TeamModels(
     name: "Mounata Ghimire",
     imageUrl: "assets/teams/mounata-ghimire.jpg",
-    position: "Senior Manager",
+    position: "Event Manager",
   ),
   TeamModels(
     name: "Ranjit Kumar Pandit",

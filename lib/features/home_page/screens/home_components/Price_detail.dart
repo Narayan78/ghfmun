@@ -371,7 +371,7 @@ class PriceDetail extends StatelessWidget {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               minimumSize:
-                                  MaterialStateProperty.all(    Size(250, 42)),
+                                  MaterialStateProperty.all(const Size(250, 42)),
                               backgroundColor: MaterialStateProperty.all(
                                 const Color.fromARGB(255, 204, 239, 248),
                               ),
@@ -388,7 +388,6 @@ class PriceDetail extends StatelessWidget {
                                 numberController.clear();
                                 enquiryController.clear();
                               }
-                            
                             },
                             child: enquiryState!.isLoading
                                 ? const CircularProgressIndicator()

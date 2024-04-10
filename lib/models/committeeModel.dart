@@ -14,36 +14,35 @@ final List<CommitteeModel> committeeList = [
   CommitteeModel(
     committeeName: 'DISEC (Disarmament and International Security)',
     reserceTopic:
-        'Examining the economic implications of global arms trade and its impact on international security.',
+        'Preventing arms Race during global economic downturn.',
     description:
         '',
   ),
   CommitteeModel(
     committeeName: 'ECOFIN (Economic and Financial Affairs Council):',
     reserceTopic:
-        'Formulating strategies to navigate the current global financial crisis and proposing'
-        ' sustainable economic solutions',
+        'Stabilizing financial regulations to prevent recession through international aids',
     description:
         '',
   ),
   CommitteeModel(
-    committeeName: 'SOCHUM (Social, Humanitarian and Cultural Committee)',
+    committeeName: 'UNHRC (Social, Humanitarian and Cultural Committee)',
     reserceTopic:
-        'Analyzing and mitigating the socio-economic impact of the current financial crisis on vulnerable populations.',
+        'Impact of economic recession on human rights for vulnerable populations',
     description:
         "",
   ),
   CommitteeModel(
-    committeeName: 'SPECPOL (Special Political and Decolonization Committee)',
+    committeeName: 'UNDP (Special Political and Decolonization Committee)',
     reserceTopic:
-        'Investigating the role of economic policies in post-colonial nations and ensuring equitable development',
+        'Recession\'s Impact on progress towards SDG goals.',
     description:
         "",
   ),
   CommitteeModel(
-    committeeName: 'Administrative and Budgetary',
+    committeeName: 'UNSC',
     reserceTopic:
-        'Allocating resources for global economic recovery and future preparedness',
+        'Accessing potential global security implication of economic recession.',
     description:
         "",
   ),

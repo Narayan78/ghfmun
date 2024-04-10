@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ghfmun/features/about_us/screens/components/Faq_button.dart';
+import 'package:ghfmun/features/committee/screens/components/Faq_button.dart';
 import '../../../common/footer.dart';
 import '../../../common/logoContainer.dart';
 import '../../../common/navigation_bar.dart';
 import '../../../models/committeeModel.dart';
 
-class AboutUs extends StatelessWidget {
-  const AboutUs({super.key});
+class Committee extends StatelessWidget {
+  const Committee({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +21,34 @@ class AboutUs extends StatelessWidget {
               Column(
                 children: [
                   const NavigationBarWidget(),
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    color: const Color.fromARGB(255, 96, 155, 204),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        screenSize.width >= 1080
+                            ? const Text(
+                                "Email: info@globalhelpfoundation.org   Phone: +977 9851041063   Address: Naxal,"
+                                " Kathmandu Nepal",
+                                style: TextStyle(fontSize: 18),
+                              )
+                            : screenSize.width >= 760
+                                ? const Text(
+                                    "Email: info@globalhelpfoundation.org   Phone: +977 9851041063 ",
+                                    style: TextStyle(fontSize: 18),
+                                  )
+                                : const Text(
+                                    "Email: info@globalhelpfoundation.org",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                        const SizedBox(
+                          width: 20,
+                        )
+                      ],
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                     child: Container(
@@ -39,9 +67,9 @@ class AboutUs extends StatelessWidget {
                           const Row(
                             children: [
                               Spacer(),
-                              SizedBox(width: 55,),
+                              SizedBox(width: 55),
                               Text(
-                                "About Us",
+                                "Committee",
                                 style: TextStyle(
                                   fontSize: 40,
                                   fontWeight: FontWeight.bold,
@@ -54,15 +82,20 @@ class AboutUs extends StatelessWidget {
                           const SizedBox(
                             height: 20,
                           ),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom:  8.0),
+                            child: Text(
+                              "ORGANIZING COMMITTEE",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w600 , color: Colors.black),
+                            ),
+                          ),
                           const Text(
                             textAlign: TextAlign.justify,
-                            "The Global Help Foundation Model United Nations (GHFMUN) is a platform for young leaders "
-                            "to engage in diplomatic discussions and debates on global issues. GHFMUN is a simulation "
-                            "of the United Nations, where students take on the role of delegates, representing different"
-                            " countries and debating on global issues. GHFMUN is a platform for young leaders to engage "
-                            "in diplomatic discussions and debates on global issues. GHFMUN is a simulation of the United"
-                            " Nations, where students take on the role of delegates, representing different countries and"
-                            " debating on global issues.",
+                           "A committed external Organizing Committee, composed of 4-5 seasoned members, will"
+                           " meticulously oversee the logistical and administrative facets of GHFMUN. Their primary"
+                           " focus is ensuring the seamless execution of the event, guaranteeing a productive and "
+                           "memorable experience for all participants.",
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -70,13 +103,16 @@ class AboutUs extends StatelessWidget {
                           const SizedBox(
                             height: 50,
                           ),
-                          const Text(
-                            "Committee",
-                            style: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic),
+
+                               const Padding(
+                            padding: EdgeInsets.only(bottom:  8.0),
+                            child: Text(
+                              "UNIFIED COMMITTEE TOPIC",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w600 , color: Colors.black),
+                            ),
                           ),
+                    
                         ],
                       ),
                     ),
@@ -92,7 +128,7 @@ class AboutUs extends StatelessWidget {
                               context,
                               committeeList[index].committeeName,
                               committeeList[index].reserceTopic,
-                              //   committeeList[index].description
+                            
                             );
                           }),
                     ),
@@ -103,7 +139,7 @@ class AboutUs extends StatelessWidget {
               screenSize.width >= 650
                   ? Positioned(
                       top: screenSize.height * 0,
-                      left: screenSize.width * 0.1,
+                      left: screenSize.width * 0.07,
                       child: LogoContainer(
                         height: screenSize.height * 0.18,
                         width: screenSize.height * 0.17,

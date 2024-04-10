@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:ghfmun/common/logoContainer.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/our_programs.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/training.dart';
+import 'package:ghfmun/features/home_page/screens/home_components/video_player.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/why_us.dart';
 import 'package:ghfmun/common/footer.dart';
 import 'package:ghfmun/common/navigation_bar.dart';
@@ -41,36 +44,6 @@ class HomePage extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-
-                      // CarouselSlider(
-                      //   options: CarouselOptions(
-                      //     height: size.height * 0.9,
-
-                      //     autoPlay: true,
-                      //     autoPlayInterval: const Duration(seconds: 10),
-                      //     autoPlayAnimationDuration:
-                      //         const Duration(milliseconds: 500),
-                      //     autoPlayCurve: Curves.fastOutSlowIn,
-                      //     scrollDirection: Axis.horizontal,
-                      //   ),
-                      //   items: [
-                      //     "assets/bg_banner.jpg",
-
-                      //   ].map((i) {
-                      //     return Builder(
-                      //       builder: (BuildContext context) {
-                      //         return Container(
-                      //           margin:
-                      //               const EdgeInsets.symmetric(horizontal: 2.0),
-                      //           child: Image.asset(
-                      //             i.toString(),
-                      //             fit: BoxFit.cover,
-                      //           ),
-                      //         );
-                      //       },
-                      //     );
-                      //   }).toList(),
-                      // ),
                       Container(
                         height: size.width >= 800
                             ? size.height * 0.9
@@ -166,19 +139,44 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left : 120.0),
+                        child: Text(
+                          "Our Programs ",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(width: 120),
+                          VideoPlayWebView(
+                            htmlCode:
+                                '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                          ),
+                          SizedBox(width: 50),
+                          VideoPlayWebView(
+                            htmlCode:
+                                '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 50),
                   const PriceDetail(),
-                  //  const SizedBox(
-                  //   height: 250,
-                 
-                  //    child:  ButterFlyAssetVideo(),
-                  // ),
                   const SizedBox(height: 70),
-                  const FooterSection()
+                  const SizedBox(
+                    child: FooterSection(),
+                  )
                 ],
               ),
               Positioned(
                 top: size.height * 0,
-                left: size.width * 0.1,
+                left: size.width * 0.07,
                 child: LogoContainer(
                   height: size.height * 0.18,
                   width: size.height * 0.17,
