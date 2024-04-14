@@ -54,7 +54,7 @@ class FooterSection extends StatelessWidget {
             ),
           ),
           Image.asset(
-            "assets/ghfmun_logo.png",
+            "assets/favicon.png",
             width: 100, // Adjust image width as needed
             height: size.height * 0.15, // Adjust image height as needed
           ),

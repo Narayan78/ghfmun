@@ -1,12 +1,13 @@
 
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class FlipContainer extends StatefulWidget {
   final Widget frontChild;
   final Widget backChild;
 
-  const FlipContainer({Key? key, required this.frontChild, required this.backChild})
-      : super(key: key);
+  const FlipContainer({super.key, required this.frontChild, required this.backChild});
 
   @override
   _FlipContainerState createState() => _FlipContainerState();

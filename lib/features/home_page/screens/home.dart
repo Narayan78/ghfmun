@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ghfmun/common/logoContainer.dart';
-import 'package:ghfmun/features/home_page/screens/home_components/our_programs.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/training.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/video_player.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/why_us.dart';
@@ -34,13 +31,13 @@ class HomePage extends StatelessWidget {
                   ),
                   Stack(
                     children: [
-                      Container(
+                      SizedBox(
                         height: size.width >= 800
                             ? size.height * 0.9
                             : size.height * 0.37,
                         width: double.infinity,
                         child: Image.asset(
-                          "assets/bg_banner.jpg",
+                          "assets/ghfmun_bg.jpg",
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -49,7 +46,7 @@ class HomePage extends StatelessWidget {
                             ? size.height * 0.9
                             : size.height * 0.37,
                         decoration: const BoxDecoration(
-                          gradient: LinearGradient(
+                          gradient: LinearGradient( 
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
@@ -150,19 +147,22 @@ class HomePage extends StatelessWidget {
                               fontSize: 25, fontWeight: FontWeight.w600),
                         ),
                       ),
-                      Row(
-                        children: [
-                          SizedBox(width: 120),
-                          VideoPlayWebView(
-                            htmlCode:
-                                '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-                          ),
-                          SizedBox(width: 50),
-                          VideoPlayWebView(
-                            htmlCode:
-                                '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-                          ),
-                        ],
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            SizedBox(width: 120),
+                            VideoPlayWebView(
+                              htmlCode:
+                                  '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                            ),
+                            SizedBox(width: 50),
+                            VideoPlayWebView(
+                              htmlCode:
+                                  '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

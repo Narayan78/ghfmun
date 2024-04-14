@@ -29,7 +29,7 @@ class LogoContainer extends StatelessWidget {
         ),
         height: height,
         width: width,
-        child: Image.asset("assets/ghfmun_logo.png"),
+        child: Image.asset("assets/favicon.png"),
       ),
     );
   }
