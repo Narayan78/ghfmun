@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common/nav_button.dart';
 import 'package:ghfmun/features/our_team/screens/contact_us.dart';
-import 'package:ghfmun/features/home_page/screens/home.dart';
 import 'package:ghfmun/features/agendas/screens/agenda.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../features/committee/screens/about_us.dart';
