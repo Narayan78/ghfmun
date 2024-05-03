@@ -20,37 +20,35 @@ class Agenda extends StatelessWidget {
               Column(
                 children: [
                   const NavigationBarWidget(),
-                        Container(
-                        height: 50,
-                        width: double.infinity,
-                        color: const Color.fromARGB(255, 96, 155, 204),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            screenSize.width >= 1080
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    color: const Color.fromARGB(255, 96, 155, 204),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        screenSize.width >= 1080
+                            ? const Text(
+                                "Email: info@globalhelpfoundation.org   Phone: +977 9851041063   Address: Naxal,"
+                                " Kathmandu Nepal",
+                                style: TextStyle(fontSize: 18),
+                              )
+                            : screenSize.width >= 760
                                 ? const Text(
-                                    "Email: info@globalhelpfoundation.org   Phone: +977 9851041063   Address: Naxal,"
-                                    " Kathmandu Nepal",
+                                    "Email: info@globalhelpfoundation.org   Phone: +977 9851041063 ",
                                     style: TextStyle(fontSize: 18),
                                   )
-                                : screenSize.width >= 760
-                                    ? const Text(
-                                        "Email: info@globalhelpfoundation.org   Phone: +977 9851041063 ",
-                                        style: TextStyle(fontSize: 18),
-                                      )
-                                    : const Text(
-                                        "Email: info@globalhelpfoundation.org",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                            const SizedBox(
-                              width: 20,
-                            )
-                          ],
-                        ),
-                      ),
+                                : const Text(
+                                    "Email: info@globalhelpfoundation.org",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                        const SizedBox(width: 20)
+                      ],
+                    ),
+                  ),
                   Container(
                     color: const Color.fromARGB(255, 255, 255, 255),
-                 //   height: screenSize.height * 0.5,
+                    //   height: screenSize.height * 0.5,
                     width: screenSize.width,
                     child: const Center(
                       child: Padding(
@@ -67,13 +65,11 @@ class Agenda extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(
-                              height: 20,
-                            ),
+                            SizedBox(height: 20),
                             Padding(
-                              padding: EdgeInsets.all(15.0),
+                              padding: EdgeInsets.all(30.0),
                               child: Text(
-                                 textAlign: TextAlign.justify,
+                                textAlign: TextAlign.justify,
                                 "The Global Help Foundation Model United Nations (GHFMUN) is a platform for"
                                 " young leaders to engage in diplomatic discussions and debates on global issues."
                                 " GHFMUN is a simulation of the United Nations, where students take on the role of "
@@ -81,7 +77,7 @@ class Agenda extends StatelessWidget {
                                 " is a platform for young leaders to engage in diplomatic discussions and debates on"
                                 " global issues. GHFMUN is a simulation of the United Nations, where students take on"
                                 "the role of delegates, representing different countries and debating on global issues.",
-                              //  overflow: TextOverflow.ellipsis,
+                                //  overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -90,6 +86,34 @@ class Agenda extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 70.0, top: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Motive of GHFMUN 2024",
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 70.0, right: 40),
+                    child: Text(
+                      "GHFMUN 2024 Aims To: "
+                      "Foster global understanding and collaboration."
+                      "Empower youth by nurturing leadership skills."
+                      "Cultivate cultural exchange and dialogue."
+                      "Address real-world challenges through innovative solutions."
+                      "Provide networking opportunities for personal and professional growth.",
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                   const Padding(

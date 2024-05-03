@@ -31,7 +31,7 @@ final List<FAQsModel> faqsModel = [
   FAQsModel(
       question: "3) What is the deadline for registration?",
       answer:
-          "The registration deadline for GHFMUN is [insert specific date]. Be sure to complete your "
+          "The registration deadline for GHFMUN is 2024 May 23. Be sure to complete your "
           "registration before this date to ensure your participation."),
   FAQsModel(
       question:
@@ -45,5 +45,4 @@ final List<FAQsModel> faqsModel = [
           "GHFMUN provides resources such as background guides and research materials to help "
           "participants prepare. Additionally, attend any pre-conference training sessions and familiarize "
           "yourself with the rules of procedure."),
-          
 ];

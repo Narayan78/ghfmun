@@ -99,10 +99,16 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> {
           elevation: 1,
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: isExpanded
-                    ? Colors.white
-                    : const Color.fromARGB(255, 245, 244, 244)),
+              borderRadius: BorderRadius.circular(15),
+              color: isExpanded
+                  ? Colors.white
+                  : const Color.fromARGB(
+                      255,
+                      245,
+                      244,
+                      244,
+                    ),
+            ),
             child: Column(
               children: [
                 Container(
@@ -114,10 +120,13 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> {
                       Text(
                         widget.title,
                         style: TextStyle(
-                            color: isExpanded ? Colors.blue : Colors.black,
-                            fontSize: 20),
+                          color: isExpanded ? Colors.blue : Colors.black,
+                          fontSize: 20,
+                        ),
                       ),
-                      Icon(isExpanded ? Icons.expand_less : Icons.expand_more),
+                      Icon(
+                        isExpanded ? Icons.expand_less : Icons.expand_more,
+                      ),
                     ],
                   ),
                 ),

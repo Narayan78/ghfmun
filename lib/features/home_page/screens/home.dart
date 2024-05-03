@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
                             ? size.height * 0.9
                             : size.height * 0.37,
                         decoration: const BoxDecoration(
-                          gradient: LinearGradient( 
+                          gradient: LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
@@ -61,9 +61,10 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           SizedBox(
-                              height: size.width >= 800
-                                  ? size.height * 0.8
-                                  : size.height * 0.3),
+                            height: size.width >= 800
+                                ? size.height * 0.8
+                                : size.height * 0.3,
+                          ),
                           SizedBox(
                             width: double.infinity,
                             child: Center(
@@ -95,9 +96,7 @@ class HomePage extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 50,
-                  ),
+                  const SizedBox(height: 50),
                   Row(
                     children: [
                       const Spacer(),
@@ -107,9 +106,10 @@ class HomePage extends StatelessWidget {
                           "GHF MUN Empowering Youth to Change the World",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: size.width >= 650 ? 40 : 30,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FontStyle.italic),
+                            fontSize: size.width >= 650 ? 40 : 30,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
                       ),
                       const Spacer(),
@@ -128,19 +128,15 @@ class HomePage extends StatelessWidget {
                           textStyle: const TextStyle(fontSize: 20)),
                     ),
                   ),
-                  const SizedBox(
-                    height: 50,
-                  ),
+                  const SizedBox(height: 50),
                   const WhyUs(),
                   TrainingSection(),
-                  const SizedBox(
-                    height: 50,
-                  ),
+                  const SizedBox(height: 50),
                   const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left : 120.0),
+                        padding: EdgeInsets.only(left: 120.0),
                         child: Text(
                           "Our Programs ",
                           style: TextStyle(
@@ -152,11 +148,7 @@ class HomePage extends StatelessWidget {
                         child: Row(
                           children: [
                             SizedBox(width: 120),
-                            VideoPlayWebView(
-                              htmlCode:
-                                  '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-                            ),
-                            SizedBox(width: 50),
+                            //  SizedBox(width: 50),
                             VideoPlayWebView(
                               htmlCode:
                                   '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',

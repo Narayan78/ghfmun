@@ -10,7 +10,11 @@ void main() {
       statusBarColor: Colors.blueAccent,
     ),
   );
-  runApp(const ProviderScope(child:  MyApp()));
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -25,4 +29,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

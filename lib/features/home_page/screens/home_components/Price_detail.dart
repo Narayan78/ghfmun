@@ -28,23 +28,27 @@ class PriceDetail extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 100.0),
-                  child: quiryMethod(screenSize, emailController,
-                      numberController, enquiryController),
+                  child: quiryMethod(
+                    screenSize,
+                    emailController,
+                    numberController,
+                    enquiryController,
+                  ),
                 ),
-                SizedBox(
-                  width: screenSize.width * 0.009,
-                ),
+                SizedBox(width: screenSize.width * 0.009),
                 priceTagMethod(context),
               ],
             )
           : Column(
               children: [
                 priceTagMethod(context),
-                SizedBox(
-                  height: screenSize.width * 0.01,
+                SizedBox(height: screenSize.width * 0.01),
+                quiryMethod(
+                  screenSize,
+                  emailController,
+                  numberController,
+                  enquiryController,
                 ),
-                quiryMethod(screenSize, emailController, numberController,
-                    enquiryController),
               ],
             ),
     );
@@ -370,8 +374,8 @@ class PriceDetail extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 8.0, bottom: 8),
                           child: ElevatedButton(
                             style: ButtonStyle(
-                              minimumSize:
-                                  MaterialStateProperty.all(const Size(250, 42)),
+                              minimumSize: MaterialStateProperty.all(
+                                  const Size(250, 42)),
                               backgroundColor: MaterialStateProperty.all(
                                 const Color.fromARGB(255, 204, 239, 248),
                               ),
