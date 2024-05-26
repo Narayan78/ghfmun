@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ghfmun/models/teamsModel.dart';
+import 'package:ghfmun/models/teams_model.dart';
 import '../../../common/footer.dart';
-import '../../../common/logoContainer.dart';
+import '../../../common/logo_container.dart';
 import '../../../common/navigation_bar.dart';
 
 class ContactUs extends StatelessWidget {
@@ -60,13 +60,15 @@ class ContactUs extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.only(left: 60.0),
                         child: Text(
-                          "Our Teams ",
-                          style: TextStyle(fontSize: 35),
+                          "OUR TEAM",
+                          style: TextStyle(
+                              fontSize: 35, fontWeight: FontWeight.w600),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 50.0, right: 50),
                         child: GridView.builder(
+                          
                           shrinkWrap: true,
                           padding: const EdgeInsets.symmetric(
                               vertical: 50, horizontal: 2),
@@ -78,7 +80,7 @@ class ContactUs extends StatelessWidget {
                             childAspectRatio:
                                 screenSize.width >= 1090 ? 3 / 1.5 : 3 / 0.9,
                           ),
-                          itemCount: teamList.length,
+                          itemCount: companyTeamList.length,
                           itemBuilder: (BuildContext context, int index) {
                             return Card(
                               elevation: 2,
@@ -90,12 +92,12 @@ class ContactUs extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     SizedBox(
-                                      width: 300,
-                                      height: 500,
+                                      width: 250,
+                                      height: 520,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
                                         child: Image.asset(
-                                          teamList[index].imageUrl,
+                                          companyTeamList[index].imageUrl,
                                           fit: BoxFit.cover,
                                           errorBuilder: (BuildContext context,
                                               Object exception,
@@ -113,17 +115,121 @@ class ContactUs extends StatelessWidget {
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            teamList[index].name,
+                                            companyTeamList[index].name,
                                             style: const TextStyle(
                                                 fontSize: 20,
                                                 fontWeight: FontWeight.w600),
                                           ),
                                           Text(
-                                            teamList[index].position,
+                                            companyTeamList[index].position,
                                             style:
                                                 const TextStyle(fontSize: 15),
+                                          ),
+                                          const SizedBox(height: 20),
+
+                                          // SizedBox(
+                                          //   child: Text(
+                                          //     overflow: TextOverflow.ellipsis,
+                                          //     companyTeamList[index]
+                                          //         .description
+                                          //         .toString(),
+                                          //     style:
+                                          //         const TextStyle(fontSize: 15),
+                                          //   ),
+                                          // ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 50.0, right: 50),
+                        child: GridView.builder(
+                          shrinkWrap: true,
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 50, horizontal: 2),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: screenSize.width >= 1090 ? 2 : 1,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10,
+                            childAspectRatio:
+                                screenSize.width >= 1090 ? 3 / 1.5 : 3 / 0.9,
+                          ),
+                          itemCount: chairTeamList.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Card(
+                              elevation: 2,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 250,
+                                      height: 520,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.asset(
+                                          chairTeamList[index].imageUrl,
+                                          fit: BoxFit.cover,
+                                          errorBuilder: (BuildContext context,
+                                              Object exception,
+                                              StackTrace? stackTrace) {
+                                            // Display a placeholder or error message when image loading fails
+                                            return Image.asset(
+                                                "assets/errorPerson.jpg");
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 15.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            chairTeamList[index].name,
+                                            style: const TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          Text(
+                                            chairTeamList[index].position,
+                                            style:
+                                                const TextStyle(fontSize: 15),
+                                          ),
+                                          const SizedBox(height: 20),
+                                          const Text(
+                                            "Education",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          SizedBox(
+                                            child: Text(
+                                              overflow: TextOverflow.ellipsis,
+                                              chairTeamList[index]
+                                                  .description
+                                                  .toString(),
+                                              style:
+                                                  const TextStyle(fontSize: 15),
+                                            ),
                                           ),
                                         ],
                                       ),

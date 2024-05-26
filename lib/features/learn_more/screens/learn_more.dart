@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common/navigation_bar.dart';
-import '../../../common/logoContainer.dart';
+import '../../../common/logo_container.dart';
 
 class LearnMore extends StatelessWidget {
   const LearnMore({super.key});
@@ -9,7 +9,7 @@ class LearnMore extends StatelessWidget {
   Widget build(BuildContext context) {
     ScrollController scrollController = ScrollController();
 
-    void _scrollToTop() {
+    void scrollToTop() {
       scrollController.animateTo(
         0.0,
         duration: const Duration(milliseconds: 500),
@@ -28,7 +28,7 @@ class LearnMore extends StatelessWidget {
               size: 25,
             ),
             onPressed: () {
-              _scrollToTop();
+              scrollToTop();
             }),
         body: SingleChildScrollView(
           controller: scrollController,

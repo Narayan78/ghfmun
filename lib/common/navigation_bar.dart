@@ -11,8 +11,8 @@ class NavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    print("width :" "${size.width}");
-    print("height :" "${size.height}");
+    // print("width :" "${size.width}");
+    // print("height :" "${size.height}");
 
     void urlLuncher() async {
       await launchUrl(
@@ -97,14 +97,13 @@ class NavigationBarWidget extends StatelessWidget {
                         switch (value) {
                           case 0:
                             urlLuncher();
-
                             break;
                           case 1:
-                            navigateToPage(
-                                context, const Committee(), "About us");
+                            navigateToPage(context, const Agenda(), "About us");
                             break;
                           case 2:
-                            navigateToPage(context, const Agenda(), "Join-us");
+                            navigateToPage(
+                                context, const Committee(), "Join-us");
                             break;
                           case 3:
                             navigateToPage(
@@ -115,9 +114,7 @@ class NavigationBarWidget extends StatelessWidget {
                     });
                   },
                 ),
-                const SizedBox(
-                  width: 30,
-                )
+                const SizedBox(width: 30)
               ],
             ),
     );

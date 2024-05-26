@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghfmun/common/footer.dart';
-import '../../../common/logoContainer.dart';
+import '../../../common/logo_container.dart';
 import '../../../common/navigation_bar.dart';
 import 'components/agendas.dart';
 
@@ -78,7 +78,7 @@ class Agenda extends StatelessWidget {
                                 " global issues. GHFMUN is a simulation of the United Nations, where students take on"
                                 "the role of delegates, representing different countries and debating on global issues.",
                                 //  overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
+                                style: TextStyle( // 
                                   fontSize: 20,
                                 ),
                               ),

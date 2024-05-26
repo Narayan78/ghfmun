@@ -1,5 +1,5 @@
 name: ghfmun
-description: "A new Flutter project."
+description: "Welcome to ghfmun, a dynamic Model United Nations program dedicated to cultivating the next generation of global leaders."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -54,6 +54,8 @@ dependencies:
   webview_flutter: ^4.7.0
   flutter_widget_from_html_core: ^0.14.11
   fwfh_webview: ^0.14.8
+  visibility_detector: ^0.4.0+2
+  flutter_html: ^3.0.0-beta.2
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +84,7 @@ flutter:
     - assets/
     - assets/teams/
     - assets/purposal/
+    - assets/chairMembers/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

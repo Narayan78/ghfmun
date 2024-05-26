@@ -52,7 +52,7 @@ final List<AgendaModel> agendaModel = [
         "*  22:00 onwards: Proceed towards rooms.\n",
   ),
   AgendaModel(
-    headlineText: "Day 3: Saturday, May 26, 2024",
+    headlineText: "Day 4: Saturday, May 26, 2024",
     title: "Diplomacy and Collaboration",
     text: "*  9:00 - 09:30: Wakeup and CheckOut.\n"
         "*  09:30 - 10:30: Breakfast.\n"

@@ -23,11 +23,11 @@ void sendEmail(String to, String subject, String htmlContent) async {
 
     // Handle response
     if (response.statusCode == 200) {
-      print('Email sent successfully');
+      // print('Email sent successfully');
     } else {
-      print('Failed to send email');
+      // print('Failed to send email');
     }
   } catch (error) {
-    print('Error sending email: $error');
+    // print('Error sending email: $error');
   }
 }

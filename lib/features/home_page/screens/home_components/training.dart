@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 class TrainingSection extends StatelessWidget {
 //  final AutoScrollController controller = AutoScrollController();
 
-  TrainingSection({super.key});
+  const TrainingSection({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ghfmun/common/logoContainer.dart';
+import 'package:ghfmun/common/logo_container.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/training.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/video_player.dart';
 import 'package:ghfmun/features/home_page/screens/home_components/why_us.dart';
@@ -7,7 +7,7 @@ import 'package:ghfmun/common/footer.dart';
 import 'package:ghfmun/common/navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'home_components/Price_detail.dart';
+import 'home_components/price_detail.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -96,7 +96,10 @@ class HomePage extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(height: 50),
+
+                  const SizedBox(height: 20),
+                  //     const IntroductionControllerSection(),
+
                   Row(
                     children: [
                       const Spacer(),
@@ -115,30 +118,51 @@ class HomePage extends StatelessWidget {
                       const Spacer(),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 40.0, right: 40.0),
-                    child: Text(
-                      textAlign: TextAlign.center,
-                      "Welcome to GHFMUN, a dynamic Model United Nations program dedicated to cultivating the next generation of global leaders."
-                      "GHFMUN provides a unique platform for high school and college students to engage in simulated United Nations conferences, "
-                      "fostering diplomacy, critical thinking, and cross-cultural understanding."
-                      " GHFMUN hosts an annual conference that brings together students from diverse backgrounds. Our conferences feature a variety "
-                      "of committees, each focusing on different aspects of international relations and current global challenges.",
-                      style: GoogleFonts.actor(
-                          textStyle: const TextStyle(fontSize: 20)),
-                    ),
+                  Stack(
+                    children: [
+                      Positioned(
+                        top: 0,
+                        right: MediaQuery.of(context).size.width * 0.45,
+                        child: Image.asset(
+                          "favicon.png",
+                          scale: 3,
+                          color: Colors.black.withOpacity(0.07),
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 40.0, right: 40.0),
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              "Welcome to GHFMUN, a dynamic Model United Nations program dedicated to cultivating the next generation of global leaders."
+                              "GHFMUN provides a unique platform for high school and college students to engage in simulated United Nations conferences, "
+                              "fostering diplomacy, critical thinking, and cross-cultural understanding."
+                              " GHFMUN hosts an annual conference that brings together students from diverse backgrounds. Our conferences feature a variety "
+                              "of committees, each focusing on different aspects of international relations and current global challenges.",
+                              style: GoogleFonts.actor(
+                                  textStyle: const TextStyle(fontSize: 20)),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          )
+                        ],
+                        ),
+                    ],
                   ),
                   const SizedBox(height: 50),
                   const WhyUs(),
-                  TrainingSection(),
+                  const TrainingSection(),
                   const SizedBox(height: 50),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(left: 120.0),
                         child: Text(
-                          "Our Programs ",
+                          "GHFMUN 2024",
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.w600),
                         ),
@@ -147,11 +171,14 @@ class HomePage extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
-                            SizedBox(width: 120),
+                            SizedBox(width: size.width * 0.08),
                             //  SizedBox(width: 50),
-                            VideoPlayWebView(
-                              htmlCode:
-                                  '<iframe width="480" height="270" src="https://www.youtube.com/embed/7wWMSAy29fU?si=Zaq_fbDpN4sHW69f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: const VideoPlayWebView(
+                                htmlCode:
+                                    '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Hd6zN0niZiM?si=IaUNtRH0fQDt2F3q&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                              ),
                             ),
                           ],
                         ),

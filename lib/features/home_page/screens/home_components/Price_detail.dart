@@ -246,7 +246,7 @@ class PriceDetail extends StatelessWidget {
     TextEditingController numberController,
     TextEditingController enquiryController,
   ) {
-    final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+    final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
     return SizedBox(
       child: Center(
@@ -265,7 +265,7 @@ class PriceDetail extends StatelessWidget {
                   ? const EdgeInsets.only(left: 40.0, right: 60)
                   : const EdgeInsets.all(20),
               child: Form(
-                key: _formKey,
+                key: formKey,
                 child: Column(
                   children: [
                     const SizedBox(
@@ -381,7 +381,7 @@ class PriceDetail extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                              if (_formKey.currentState!.validate()) {
+                              if (formKey.currentState!.validate()) {
                                 enquiryProvider.sendEnquiry(
                                   emailController.text,
                                   numberController.text,
@@ -426,7 +426,7 @@ class PriceDetail extends StatelessWidget {
   }
 
 // Function to show the popup dialog
-  Future<void> _showDialog(
+  Future<void> showDialogWidget(
     String message,
     BuildContext context,
   ) async {

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ghfmun/models/faqs_model.dart';
-import 'package:ghfmun/common/logoContainer.dart';
+import 'package:ghfmun/common/logo_container.dart';
 import '../../../../common/navigation_bar.dart';
 
 class FaqsPage extends StatelessWidget {
